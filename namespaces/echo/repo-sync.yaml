@@ -1,0 +1,16 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: echo
+  namespace: echo
+spec:
+  # Since this is for a namespace repository, the format should be unstructured
+  sourceFormat: unstructured
+  git:
+   repo: https://github.com/GoogleContainerTools/kpt-samples.git
+   revision: HEAD
+   branch: main
+   dir: "echo"
+   auth: none
+   # The `noSSLVerify` field is supported in Anthos Config Management version 1.8.2 and later.
+   #noSSLVerify: hnoSSLVerify`
