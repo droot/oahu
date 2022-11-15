@@ -12,6 +12,6 @@ rules:
   verbs:
   - "*"
 - apiGroups: ["networking.k8s.io"]
-  resources: ["Ingress"]
+  resources: ["Ingress", "Ingresses"]
   verbs:
   - "*"
